@@ -10,10 +10,8 @@
     <label for="exampleInputEmail1" class="form-label">Last name</label>
     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter lastname">
   </div>
-  <div class="mb-3">
   <label for="startDate">Date of Birth</label>
-<input id="startDate" class="form-control" type="date" />
-  </div>
+  <input id="datepicker" type="text"/>
   <div class="mb-3">
   <label class="form-label" for="specialty">Specialty</label>
   <select class="form-select" aria-label="Default select example" id="specialty">
