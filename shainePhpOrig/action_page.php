@@ -14,8 +14,8 @@
 <div class="card" style="width: 18rem;">
   <div class="card-body">
     <h5 class="card-title">Info</h5>
-    <p class="card-text"><?php echo "My name is $firstname $lastname Born on $date . I am $specialty  and you can contact my phone number $phone ";?></p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <p class="card-text" ><?php echo "My name is $firstname $lastname Born on $date . I am $specialty  and you can contact my phone number $phone ";?></p>
+    <a href="#" class="btn btn-primary">Confirm</a>
   </div>
 </div>
 <?php require 'includes/footer.php'?>   
