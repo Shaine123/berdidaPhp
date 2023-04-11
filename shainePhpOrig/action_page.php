@@ -14,7 +14,11 @@
 <div class="card" style="width: 18rem;">
   <div class="card-body">
     <h5 class="card-title">Info</h5>
-    <p class="card-text" ><?php echo "My name is $firstname $lastname Born on $date . I am $specialty  and you can contact my phone number $phone ";?></p>
+    <p class="card-text" ><?php 
+    echo "Name: $firstname $lastname <br>
+    BirthDay: $date <br>
+    Occupation: $specialty <br>
+    Phone:  $phone ";?></p>
     <a href="#" class="btn btn-primary">Confirm</a>
   </div>
 </div>
