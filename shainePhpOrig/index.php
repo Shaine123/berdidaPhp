@@ -10,9 +10,13 @@
     <label for="exampleInputEmail1" class="form-label">Last name</label>
     <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter lastname" name="lname">
   </div>
-
+  <div class="mb-3">
+    <label for="startDate">Date of Birth</label>
+    <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter lastname" name="date">
+  </div>
+<!-- This is the jquery code for date 
   <label for="startDate">Date of Birth</label>
-  <input id="datepicker" type="text" name="date"/>
+  <input id="datepicker" type="text" name="date"/> -->
 
   <div class="mb-3">
   <label class="form-label" for="specialty">Specialty</label>
