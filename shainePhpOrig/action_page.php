@@ -5,11 +5,30 @@
    $lastname = $_REQUEST['lname'];
    $date = $_REQUEST['date'];
    $specialty = $_REQUEST['specialty'];
+   $email = $_REQUEST['email'];
    $phone = $_REQUEST['phone'];
 //    $check = $_REQUEST['checkbox'];
  
-
+  $host = 'localhost';
+  $dbname = 'employee';
+  $username = 'root';
+  $password = '';
+  
+  $conn = mysqli_connect($host,$username,$password,$dbname);
    
+  if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+  }
+
+  $sql = "INSERT INTO employeedata(FirstName,LastName,BirthDay,Specialty,EmailAddress,PhoneNumber)
+    VALUES ('$firstname','$lastname','$date','$specialty','$email','$phone')";
+
+if (mysqli_query($conn,$sql)) {
+  echo "New record created successfully";
+} else {
+  echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+}
+mysqli_close($conn);
 ?>
 <div class="card" style="width: 18rem;">
   <div class="card-body">
