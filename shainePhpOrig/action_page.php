@@ -1,6 +1,7 @@
 <?php 
     require 'includes/header.php';
     require_once 'db/conn.php';
+    require_once 'db/crud.php';
   ?>
  <h1 style="color:green; text-align: center;">YOU HAVE BEEN REGISTERED</h1>
 <?php
@@ -10,6 +11,10 @@
    $specialty = $_REQUEST['specialty'];
    $email = $_REQUEST['email'];
    $phone = $_REQUEST['phone'];
+
+   $crud = new Crud();
+
+   $isSuccess = $crud->insert($firstname,$lastname,$date,$specialty,$email,$phone);
 //    $check = $_REQUEST['checkbox'];
  
   // $host = 'localhost';
