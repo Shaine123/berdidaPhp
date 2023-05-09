@@ -1,4 +1,7 @@
-<?php require 'includes/header.php'?>
+<?php 
+    require 'includes/header.php';
+    require_once 'db/conn.php';
+  ?>
  <h1 style="color:green; text-align: center;">YOU HAVE BEEN REGISTERED</h1>
 <?php
    $firstname = $_REQUEST['fname'];
@@ -9,26 +12,26 @@
    $phone = $_REQUEST['phone'];
 //    $check = $_REQUEST['checkbox'];
  
-  $host = 'localhost';
-  $dbname = 'employee';
-  $username = 'root';
-  $password = '';
+  // $host = 'localhost';
+  // $dbname = 'employee';
+  // $username = 'root';
+  // $password = '';
   
-  $conn = mysqli_connect($host,$username,$password,$dbname);
+  // $conn = mysqli_connect($host,$username,$password,$dbname);
    
-  if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-  }
+  // if (!$conn) {
+  //   die("Connection failed: " . mysqli_connect_error());
+  // }
 
-  $sql = "INSERT INTO employeedata(FirstName,LastName,BirthDay,Specialty,EmailAddress,PhoneNumber)
-    VALUES ('$firstname','$lastname','$date','$specialty','$email','$phone')";
+//   $sql = "INSERT INTO employeedata(FirstName,LastName,BirthDay,Specialty,EmailAddress,PhoneNumber)
+//     VALUES ('$firstname','$lastname','$date','$specialty','$email','$phone')";
 
-if (mysqli_query($conn,$sql)) {
-  echo "New record created successfully";
-} else {
-  echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-}
-mysqli_close($conn);
+// if (mysqli_query($conn,$sql)) {
+//   echo "New record created successfully";
+// } else {
+//   echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+// }
+// mysqli_close($conn);
 ?>
 <div class="card" style="width: 18rem;">
   <div class="card-body">
